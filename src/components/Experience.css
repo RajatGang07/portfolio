@@ -1,0 +1,31 @@
+.timeline { display: grid; position: relative; padding-left: 28px; }
+.timeline::before { content: ''; position: absolute; left: 7px; top: 12px; bottom: 12px; width: 1px; background: var(--line-strong); }
+.job { position: relative; padding: 18px 0 26px; border-bottom: 1px solid var(--line); }
+.timeline > :last-child .job { border-bottom: 0; }
+.job__node {
+  position: absolute; left: -28px; top: 28px; width: 15px; height: 15px; border-radius: 50%;
+  background: var(--bg); border: 2px solid var(--muted); transition: border-color 200ms ease, background 200ms ease;
+}
+.job--open .job__node { border-color: var(--accent); background: var(--accent); box-shadow: 0 0 0 5px var(--accent-soft); }
+.job--current .job__node { border-color: var(--teal); }
+.job--current.job--open .job__node { background: var(--accent); border-color: var(--accent); }
+.job__head {
+  width: 100%; display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; text-align: left;
+  padding: 4px 0; border-radius: 8px;
+}
+.job__title { display: grid; gap: 2px; min-width: 0; }
+.job__title h3 { font-size: 24px; font-weight: 600; }
+.job__role { color: var(--fg-2); font-size: 15px; }
+.job__meta { display: flex; align-items: center; gap: 14px; flex-shrink: 0; font-family: var(--font-mono); font-size: 12.5px; color: var(--muted); padding-top: 6px; }
+.job__loc::before { content: '·'; margin-right: 12px; }
+.job__chev { transition: transform 250ms ease; color: var(--fg-2); }
+.job--open .job__chev { transform: rotate(180deg); }
+.job__summary { color: var(--fg-2); margin-top: 10px; max-width: 70ch; font-size: 15.5px; }
+.job__points { display: grid; gap: 10px; padding-top: 16px; max-width: 72ch; }
+.job__points li { position: relative; padding-left: 20px; color: var(--fg-2); font-size: 15px; }
+.job__points li::before { content: ''; position: absolute; left: 0; top: 10px; width: 8px; height: 2px; background: var(--accent); }
+@media (max-width: 640px) {
+  .job__head { flex-direction: column; gap: 6px; }
+  .job__meta { padding-top: 0; }
+  .job__title h3 { font-size: 21px; }
+}
