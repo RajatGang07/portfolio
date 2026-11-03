@@ -122,7 +122,7 @@ export const experience: Job[] = [
     role: 'Software Engineer',
     period: 'Apr 2018 – Jan 2019',
     location: 'Bangalore',
-    summary: 'Full-time, on-site software engineering role at the Southeast Asian travel platform, between Groww and Gameskraft.',
+    summary: 'Software engineer on the Traveloka travel booking platform.',
     highlights: [],
   },
   {
