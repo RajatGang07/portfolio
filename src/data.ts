@@ -122,7 +122,7 @@ export const experience: Job[] = [
     role: 'Software Engineer',
     period: 'Apr 2018 – Jan 2019',
     location: 'Bangalore',
-    summary: 'Software engineer on the Traveloka travel booking platform.',
+    summary: 'Built the merchandising tool that powers content and offers inside the Traveloka app.',
     highlights: [],
   },
   {
