@@ -14,22 +14,24 @@ export function Experience() {
       <div className="wrap">
         <Reveal className="section-head">
           <span className="eyebrow">Experience</span>
-          <h2>Nine years, six companies, one habit: own it end to end.</h2>
+          <h2>Nine years, seven companies, one habit: own it end to end.</h2>
           <p>From an internal support console at Groww to leading insurance verticals at Paytm.</p>
         </Reveal>
 
         <ol className="timeline">
           {experience.map((job, i) => {
-            const isOpen = open === i
+            const expandable = job.highlights.length > 0
+            const isOpen = expandable && open === i
             return (
               <Reveal key={job.company} delay={Math.min(i, 3) * 0.05}>
                 <li className={`job ${isOpen ? 'job--open' : ''} ${job.current ? 'job--current' : ''}`}>
                   <span className="job__node" aria-hidden="true" />
                   <button
                     className="job__head"
-                    onClick={() => setOpen(isOpen ? -1 : i)}
+                    onClick={() => expandable && setOpen(isOpen ? -1 : i)}
                     aria-expanded={isOpen}
-                    aria-controls={`job-${i}`}
+                    aria-controls={expandable ? `job-${i}` : undefined}
+                    disabled={!expandable}
                   >
                     <div className="job__title">
                       <h3>{job.company}</h3>
@@ -38,7 +40,7 @@ export function Experience() {
                     <div className="job__meta">
                       <span className="job__period">{job.period}</span>
                       <span className="job__loc">{job.location}</span>
-                      <ChevronDown className="job__chev" size={18} />
+                      {expandable && <ChevronDown className="job__chev" size={18} />}
                     </div>
                   </button>
                   <p className="job__summary">{job.summary}</p>

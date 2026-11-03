@@ -14,7 +14,7 @@ export const profile = {
 export const stats = [
   { value: '9+', label: 'years shipping' },
   { value: '10', label: 'engineers led' },
-  { value: '6', label: 'companies' },
+  { value: '7', label: 'companies' },
   { value: '3', label: 'insurance verticals' },
 ]
 
@@ -107,7 +107,7 @@ export const experience: Job[] = [
   {
     company: 'Gameskraft',
     role: 'Senior Software Engineer',
-    period: 'Apr 2018 – Sep 2020',
+    period: 'Jan 2019 – Sep 2020',
     location: 'Bangalore',
     summary:
       'CRM used by the whole organisation and a 100+ member support team, plus core game features.',
@@ -118,9 +118,17 @@ export const experience: Job[] = [
     ],
   },
   {
+    company: 'Traveloka',
+    role: 'Software Engineer',
+    period: 'Apr 2018 – Jan 2019',
+    location: 'Bangalore',
+    summary: 'Full-time, on-site software engineering role at the Southeast Asian travel platform, between Groww and Gameskraft.',
+    highlights: [],
+  },
+  {
     company: 'Groww',
     role: 'Software Engineer',
-    period: 'Jul 2017 – Apr 2018',
+    period: 'Aug 2017 – Apr 2018',
     location: 'Bangalore',
     summary: 'Internal support console handling 1K+ daily customer calls and KYC for 50k users.',
     highlights: [

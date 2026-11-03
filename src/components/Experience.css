@@ -29,3 +29,4 @@
   .job__meta { padding-top: 0; }
   .job__title h3 { font-size: 21px; }
 }
+.job__head:disabled { cursor: default; }
